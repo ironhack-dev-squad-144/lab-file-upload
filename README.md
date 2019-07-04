@@ -1,85 +1,22 @@
-![Ironhack Logo](https://i.imgur.com/1QgrNNw.png)
 # Express File Uploads | IronTumblr
 
-## Requirements
+## Step 0 
 
-- [Fork this repo](https://guides.github.com/activities/forking/)
-- Clone this repo into your `~/code/labs`
+Write the models.
 
-## Submission
+## Step 1
 
-Upon completion, run the following commands
+Do the signup where users have to upload a profile picture. If they don't provide any picture, you should display an error.
 
-```
-$ git add .
-$ git commit -m "done"
-$ git push origin master
-```
-Navigate to your repo and create a Pull Request -from your master branch to the original repository master branch.
+## Step 2
 
-In the Pull request name, add your name and last names separated by a dash "-".
+Write the page "/add-post" so that a connected user can add a post with a picture.
 
-Include a link to your deployed heroku app in the pull request.
+## Step 3
 
-## Deliverables
-
-Complete all of the non-bonus iterations. No styling is required, but is suggested as bonus.
+On the home page, display all the posts. Don't forget to display the username of the creator.
 
 
-## Instructions
+## Step 4
 
-## Introduction
-
-<img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_c0b2a46765e63ac8ac589835f7bb92ea.png" width="500px">
-
-[Tumblr](tumblr.com) is an ultra popular microblogging website.
-
-**A microblog is:**
-
-> A social media site to which a user makes short, frequent posts.
-
-This is easier shown than described, so check out [this tumblr](http://bestdogmemes.tumblr.com/) filled with funny dog memes.
-
-### Iteration 1 | User Profile Pictures
-
-In the starter code, we've already provided a User model and the authentication logic. Unfortunately, the user doesn't have a profile picture.
-
-Fix the User Registration so that it allows the user to upload a file as their profile image.
-
-### Iteration 2 | Posts
-
-In this iteration, create the bread and butter of Tumblr, the Post.
-
-A post should have the following attributes:
-
-- `content` - Text belonging to the post
-- `creatorId` - ObjectId of the post's creator
-- `picPath` - Where the picture is stored
-- `picName` - The picture's name
-
-For this iteration you must create the **model**, along with the **new**, **create**, **show** and **index** routes. This should include file uploading.
-
-A user should be logged in to create a post, but *not* to view.
-
-The **index** will be the home page, and simply display all of the posts on the website.
-
-### Iteration 3 | Comments
-
-Posts have comments attached to them. Create the Comment model as a subdocument of the Post.
-
-A comment *can* have images attached to it, but not all do.
-
-The model should have the following attributes:
-
-- `content`
-- `authorId`
-- `imagePath`
-- `imageName`
-
-You should create routes to create new comments. Comments should be displayed on the Post *show* page.
-
-### Iteration 4 | Deploy!
-
-The last step in IronTumblr should be to deploy to Heroku. Don't forget to deploy your database on mongolab.
-
-Your site should be live and functioning with a working URL.
+Keep going!
