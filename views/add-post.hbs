@@ -1,0 +1,14 @@
+<h1>Add a Post</h1>
+
+<form action="/add-post" method="POST" enctype="multipart/form-data">
+  <div class="form-group">
+    <label for="picture">Picture</label>
+    <input type="file" name="picture" id="picture" cols="30" rows="10" class="form-control">
+  </div>
+   <div class="form-group">
+    <label for="content">Content</label>
+    <textarea name="content" id="content" cols="30" rows="10" class="form-control"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Add</button>
+
+</form>

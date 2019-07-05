@@ -1,5 +1,25 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<h1>IronTumblr</h1>
 
-
-<button class="btn btn-primary">Primary</button>
+<div class="card-container">
+  {{#each posts}}
+  <div class="card">
+    <img src="{{this.picPath}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-text"><strong>{{this.content}}</strong></p>
+      <p class="card-text text-right">by {{this._creator.username}}</p>
+      <hr>
+      <h6 class="text-center">Comments</h6>
+      {{this.x}}
+      {{#each this.comments}}
+        <div>- {{this.text}} (by {{this._creator.username}})</div>
+      {{/each}}
+      <form action="/add-comment/{{this._id}}" method="post" class="text-right">
+        <div class="form-group">
+          <textarea type="text" name="text" id="text" class="form-control"></textarea>
+        </div>
+        <button class="btn btn-sm btn-outline-primary">Comment</button>
+      </form>
+    </div>
+  </div>
+  {{/each}}
+</div>
