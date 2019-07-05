@@ -1,5 +1,8 @@
+$primary: tomato; // To change the primary color
+
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
